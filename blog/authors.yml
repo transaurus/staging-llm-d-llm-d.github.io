@@ -1,0 +1,151 @@
+redhat:
+  name: RedHat
+  url: https://redhat.com
+  image_url: https://www.redhat.com/rhdc/managed-files/Logo-Red_Hat-Hat_icon-Standard-RGB.svg
+
+
+robshaw:
+  name: Robert Shaw
+  title: Director of Engineering, Red Hat
+  url: https://github.com/robertgshaw2-redhat
+  image_url: https://avatars.githubusercontent.com/u/114415538?v=4
+  email: robshaw@redhat.com
+
+smarterclayton:
+  name: Clayton Coleman
+  title: Distinguished Engineer, Google
+  url: https://github.com/smarterclayton
+  image_url: https://avatars.githubusercontent.com/u/1163175?v=4
+  email: claytoncoleman@google.com
+
+chcost:
+  name: Carlos Costa
+  title: Distinguished Engineer, IBM
+  url: https://github.com/chcost
+  image_url: https://avatars.githubusercontent.com/u/26551701?v=4
+  email: chcost@us.ibm.com
+
+petecheslock:
+  name: Pete Cheslock
+  title: AI Community Architect, Red Hat
+  url: https://github.com/petecheslock
+  image_url: https://avatars.githubusercontent.com/u/511733?v=4
+  email: pete.cheslock@redhat.com
+
+cnuland:
+  name: Christopher Nuland
+  title: Principal Technical Marketing Manager for AI, Red Hat
+  url: https://github.com/cnuland
+  image_url: /img/blogs/cnuland.webp
+
+niliguy:
+  name: Nili Guy
+  title: R&D Manager, AI Infrastructure, IBM
+  url: https://www.linkedin.com/in/nilig/
+  image_url: /img/blogs/niliguy.webp
+  
+etailevran:
+  name: Etai Lev Ran
+  title: Cloud Architect, IBM
+  url: https://www.linkedin.com/in/elevran/
+  image_url: /img/blogs/etailevran.webp
+
+vitabortnikov:
+  name: Vita Bortnikov
+  title: IBM Fellow, IBM
+  url: https://www.linkedin.com/in/vita-bortnikov/
+  image_url: /img/blogs/vitabortnikov.webp
+
+maroonayoub:
+  name: Maroon Ayoub
+  title: Research Scientist & Architect, IBM
+  url: https://www.linkedin.com/in/v-maroon/
+  image_url: /img/blogs/maroonayoub.webp
+
+dannyharnik:
+  name: Danny Harnik
+  title: Senior Technical Staff Member, IBM
+  url: https://www.linkedin.com/in/danny-harnik-19a95436/
+  image_url: /img/blogs/dannyharnik.webp
+
+kfirtoledo:
+  name: Kfir Toledo
+  title: Research Staff Member, IBM
+  url: https://www.linkedin.com/in/kfir-toledo-394a8811a/
+  image_url: /img/blogs/kfirtoledo.webp
+
+effiofer:
+  name: Effi Ofer
+  title: Research Staff Member, IBM
+  url: https://www.linkedin.com/in/effi-ofer-91a261b0/
+  image_url: /img/blogs/effiofer.webp
+
+orozeri:
+  name: Or Ozeri
+  title: Research Staff Member, IBM
+  url: https://www.linkedin.com/in/or-ozeri-a942859a/
+  image_url: /img/blogs/orozeri.webp
+
+tylersmith:
+  name: Tyler Smith
+  title: Member of Technical Staff, Red Hat
+  url: https://www.linkedin.com/in/tyler-michael-smith-017b28102/
+  image_url: /img/blogs/tylersmith.webp
+
+kellenswain:
+  name: Kellen Swain
+  title: Software Engineer, Google
+  url: https://www.linkedin.com/in/kellen-swain/
+  image_url: /img/blogs/kellenswain.webp
+
+xiningwang:
+  name: Xining Wang
+  title: Senior Technical Expert, Alibaba Cloud
+  image_url: /img/blogs/xiningwang.webp
+
+hangyin:
+  name: Hang Yin
+  title: Senior R&D Engineer, Alibaba Cloud
+  image_url: /img/blogs/hangyin.webp
+
+kayyan:
+  name: Kay Yan
+  title: Principal Software Engineer, DaoCloud
+  url: https://www.linkedin.com/in/yankay/
+  image_url: /img/blogs/kayyan.webp
+
+kylebader:
+  name: Kyle Bader
+  title: Chief Architect, Data and AI, Ceph at IBM
+  url: https://www.linkedin.com/in/kyle-bader-5267a030/
+  image_url: /img/blogs/kyle-bader.webp
+
+tushargohad:
+  name: Tushar Gohad
+  title: Distinguished Engineer, Intel
+  url: https://www.linkedin.com/in/tushargohad/
+  image_url: /img/blogs/tushar-gohad.webp
+
+guymargalit:
+  name: Guy Margalit
+  title: Senior Technical Staff Member, IBM Storage CTO Office
+  url: https://www.linkedin.com/in/guymargalit/
+  image_url: /img/blogs/guymargalit.webp
+
+kaushikmitra:
+  name: Kaushik Mitra
+  title: Software Engineer, Google
+  url: https://github.com/kaushikmitr
+  image_url: https://avatars.githubusercontent.com/u/157416163?v=4
+
+benjaminbraun:
+  name: Benjamin Braun
+  title: Software Engineer, Google
+  url: https://github.com/BenjaminBraunDev
+  image_url: https://avatars.githubusercontent.com/u/187570160?v=4
+
+abdullahgharaibeh:
+  name: Abdullah Gharaibeh
+  title: Senior Staff Software Engineer, Google
+  url: https://github.com/ahg-g
+  image_url: https://avatars.githubusercontent.com/u/40361897?v=4

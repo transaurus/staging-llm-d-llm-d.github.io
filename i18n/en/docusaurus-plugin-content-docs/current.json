@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Prefix Cache Offloading": {
+    "message": "Prefix Cache Offloading",
+    "description": "The label for category 'Prefix Cache Offloading' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Infrastructure Providers": {
+    "message": "Infrastructure Providers",
+    "description": "The label for category 'Infrastructure Providers' in sidebar 'guideSidebar'"
+  },
+  "sidebar.structureSidebar.category.Components": {
+    "message": "Components",
+    "description": "The label for category 'Components' in sidebar 'structureSidebar'"
+  }
+}

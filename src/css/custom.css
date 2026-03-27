@@ -1,0 +1,671 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ * https://infima.dev/
+ * 
+ * Colour Generation for :root
+ * https://docusaurus.io/docs/styling-layout
+ */
+
+/* You can override the default Infima variables here. */
+
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url(fonts/RedHatMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+:root {
+  --ifm-color-primary: #7f317f;
+  --ifm-color-primary-dark: #722c72;
+  --ifm-color-primary-darker: #6c2a6c;
+  --ifm-color-primary-darkest: #592259;
+  --ifm-color-primary-light: #8c368c;
+  --ifm-color-primary-lighter: #923892;
+  --ifm-color-primary-lightest: #a540a5;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Red Hat Display", Arial, Helvetica, sans-serif;
+  --ifm-font-family-monospace: "Red Hat Mono", "Courier New", monospace;
+  /* Light mode code block styling for better contrast */
+  --ifm-pre-background: #f6f8fa;
+  --ifm-pre-color: #24292f;
+  --ifm-code-background: #f6f8fa;
+  background-color: white;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #d494d4;
+  --ifm-color-primary-dark: #ca7aca;
+  --ifm-color-primary-darker: #c56dc5;
+  --ifm-color-primary-darkest: #b448b4;
+  --ifm-color-primary-light: #deaede;
+  --ifm-color-primary-lighter: #e3bbe3;
+  --ifm-color-primary-lightest: #f3e1f3;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  background-color: #262626;
+}
+
+.hidden {
+display: none !important;
+}
+
+.github {
+  background-image: url("@site/static/img/new-social/github-mark.png");
+}
+
+[data-theme="dark"] .github {
+  background-image: url("@site/static/img/new-social/github-mark-white.png");
+}
+
+/* Footer social links */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-socials-row {
+  display: grid;
+  grid-template-columns: repeat(7, 26px);
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Responsive layout for smaller footer widths */
+@media screen and (max-width: 996px) {
+  .footer-socials-row {
+    grid-template-columns: repeat(4, 28px);
+    gap: 12px;
+    justify-content: start;
+  }
+  
+  .footer-socials img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.footer-socials-cta {
+  margin-top: 4px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar GitHub icon */
+.navbar .github {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar .github:hover {
+  transform: scale(1.05);
+}
+
+/* Tighten spacing for right-side navbar items */
+.navbar-github-stars,
+.navbar-slack-item {
+  padding: 0 !important;
+  margin: 0 2px !important;
+}
+
+/* Make GitHub stars iframe fit tightly */
+.navbar-github-stars {
+  display: flex !important;
+  align-items: center;
+}
+
+.navbar-github-stars iframe {
+  width: 150px !important;
+}
+
+/* Navbar Slack button */
+.navbar-slack-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--ifm-font-family-base);
+  font-size: 1rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  vertical-align: middle;
+  margin-left: 0;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-slack-button:hover {
+  background-color: #f0f0f0;
+  color: var(--ifm-navbar-link-hover-color);
+  text-decoration: none;
+}
+
+[data-theme="dark"] .navbar-slack-button:hover {
+  background-color: #3a3a3a;
+}
+
+/* Hide GitHub stars in top navbar below 1105px (they appear in hamburger menu instead) */
+@media screen and (max-width: 1105px) {
+  .navbar__inner .navbar-github-stars {
+    display: none !important;
+  }
+}
+
+/* Style GitHub stars in mobile sidebar */
+.navbar-sidebar .navbar-github-stars {
+  display: flex !important;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.navbar-sidebar .navbar-github-stars iframe {
+  width: 150px !important;
+}
+
+.header {
+  display: flex;
+  align-content: center;
+  @media screen and (max-width: 1440px) {
+    font-size: 2.5rem;
+  }
+}
+
+* em b {
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 1.1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem !important;
+  }
+}
+
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: auto;
+  }
+}
+
+.about-viewport {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: auto;
+  }
+}
+
+.welcome-viewport {
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: auto;
+  }
+}
+
+.welcome,
+.install,
+.demo,
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  font-size: larger;
+}
+
+/* ----------------------------- Welcome Section ---------------------------- */
+
+.welcome {
+  background-image: url("@site/static/img/background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.welcome-info,
+.install-gif {
+  display: block;
+}
+
+img.llm-d-logo {
+  display: inline-block;
+  padding-bottom: 10%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.welcome-info {
+  display: block;
+  text-align: center;
+  padding: 5% 10%;
+  margin: 20%;
+  background-color: rgba(255, 255, 255);
+  border-radius: 40px;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    margin: 10%;
+  }
+}
+
+[data-theme="dark"] .welcome-info {
+  background-color: rgba(38, 38, 38);
+  color: #fff;
+}
+
+.welcome-h1 {
+  display: inline;
+  font-weight: 500;
+}
+
+.welcome-h2 {
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    padding: 0%;
+    font-size: 1rem;
+  }
+}
+
+.hidden-for-mobile {
+  display: block;
+  padding-top: 5%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.static-button,
+.install-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #7f317f;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+  text-decoration: none;
+  color: #fff;
+  min-width: 160px;
+  white-space: nowrap;
+  flex: 0 1 auto;
+}
+
+.static-button:hover {
+  background-color: #a540a5;
+  transition: 250ms;
+}
+
+.button-link,
+.button-link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ----------------------------- Install Section ---------------------------- */
+
+.install-header {
+  display: flex;
+}
+
+.install-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 20%;
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    padding: 10%;
+  }
+}
+
+.install-h1 {
+  font-size: 300%;
+  @media screen and (max-width: 1024px) {
+    font-size: 150%;
+  }
+}
+
+.install-h2 {
+  font-weight: 600;
+  font-size: 200%;
+  @media screen and (max-width: 1024px) {
+    font-size: 100%;
+  }
+}
+
+.install-h3 {
+  font-weight: 500;
+  font-size: 150%;
+  @media screen and (max-width: 1024px) {
+    font-size: 75%;
+    margin: 0;
+  }
+}
+
+.install-h1,
+.install-h2,
+.install-h3 {
+  text-align: center;
+}
+
+.install-code {
+  font-family: "Red Hat Mono", monospace !important;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: #262626;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.install-code p {
+  display: inline-flex;
+}
+
+.install-logo {
+  margin-left: 2%;
+  padding-bottom: 2.5%;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+/* ------------------------------ Demo Section ------------------------------ */
+
+.demo-h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.demo-gif {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+/* ------------------------------ About Section ----------------------------- */
+
+.demo,
+.about {
+  padding: 10%;
+}
+
+.about {
+  @media screen and (max-width: 1024px) {
+    padding: 15% 10%;
+    @media screen and (max-width: 500px) {
+      padding: 30% 10%;
+    }
+  }
+}
+
+.about-header {
+  display: flex;
+  align-content: center;
+  @media screen and (max-width: 1440px) {
+    font-size: 2.5rem;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-areas:
+    "graphic-1 graphic-2 graphic-3 graphic-4"
+    "text-1 text-2 text-3 text-4";
+  align-items: center;
+  align-content: stretch;
+  justify-items: center;
+  justify-content: stretch;
+  text-align: center;
+  gap: 2em;
+  height: auto;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-areas:
+      "graphic-1 graphic-2"
+      "text-1 text-2"
+      "graphic-3 graphic-4"
+      "text-3 text-4";
+    gap: 1em;
+
+    @media screen and (max-width: 500px) {
+      grid-template-areas:
+        "graphic-1"
+        "text-1"
+        "graphic-2"
+        "text-2"
+        "graphic-3"
+        "text-3"
+        "graphic-4"
+        "text-4";
+    }
+  }
+}
+
+.about-grid > * {
+  justify-self: center;
+  align-self: center;
+  height: auto;
+}
+
+.about-graphic-1 {
+  grid-area: graphic-1;
+}
+
+.about-graphic-2 {
+  grid-area: graphic-2;
+}
+
+.about-graphic-3 {
+  grid-area: graphic-3;
+}
+
+.about-graphic-4 {
+  grid-area: graphic-4;
+}
+
+.about-text-1 {
+  grid-area: text-1;
+}
+
+.about-text-2 {
+  grid-area: text-2;
+}
+
+.about-text-3 {
+  grid-area: text-3;
+}
+
+.about-text-4 {
+  grid-area: text-4;
+}
+
+.about-graphic-1,
+.about-graphic-2,
+.about-graphic-3,
+.about-graphic-4 {
+  width: 18vw;
+  margin-top: 1vh;
+  @media screen and (max-width: 1024px) {
+    width: 25vw;
+    @media screen and (max-width: 500px) {
+      width: 75vw;
+    }
+  }
+}
+
+.about-text-1,
+.about-text-2,
+.about-text-3,
+.about-text-4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.install-button {
+  min-width: 160px;
+  max-width: 280px;
+}
+
+/* ul li {
+  list-style: none;
+  padding: 0;
+} */
+
+.ul-bulleted {
+  list-style-type: disc;
+  padding: 0;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #262626 !important;
+}
+
+/* ----------------------------- Announcement Bar ---------------------------- */
+
+/* Override Docusaurus fixed height on desktop */
+@media (min-width: 997px) {
+  :root {
+    --docusaurus-announcement-bar-height: auto !important;
+  }
+}
+
+/* Main announcement bar container - allow height to grow */
+.theme-announcement-bar {
+  height: auto !important;
+  min-height: 30px;
+  padding: 8px 16px;
+}
+
+/* Content styling - allow wrapping */
+[class*="announcementBarContent"] {
+  white-space: normal !important;
+}
+
+/* Improved YAML syntax highlighting site-wide */
+/* Fix YAML code blocks to avoid red/green diff-like appearance */
+
+/* Light mode YAML colors */
+.language-yaml .prism-code .token.string {
+  color: #032f62 !important; /* Dark blue instead of red */
+}
+
+.language-yaml .prism-code .token.comment {
+  color: #6a737d !important; /* Muted gray instead of bright green */
+}
+
+.language-yaml .prism-code .token.key.atrule {
+  color: #005cc5 !important; /* Professional blue for YAML keys */
+}
+
+.language-yaml .prism-code .token.number {
+  color: #005cc5 !important; /* Consistent blue for numbers */
+}
+
+.language-yaml .prism-code .token.boolean {
+  color: #005cc5 !important; /* Consistent blue for booleans */
+}
+
+/* Dark mode YAML colors */
+[data-theme="dark"] .language-yaml .prism-code .token.string {
+  color: #9ecbff !important; /* Light blue instead of red */
+}
+
+[data-theme="dark"] .language-yaml .prism-code .token.comment {
+  color: #8b949e !important; /* Muted gray instead of bright green */
+}
+
+[data-theme="dark"] .language-yaml .prism-code .token.key.atrule {
+  color: #79c0ff !important; /* Light blue for keys */
+}
+
+[data-theme="dark"] .language-yaml .prism-code .token.number {
+  color: #79c0ff !important; /* Consistent light blue */
+}
+
+[data-theme="dark"] .language-yaml .prism-code .token.boolean {
+  color: #79c0ff !important; /* Consistent light blue */
+}
+
+/* Improve light mode code block visibility with border and shadow - LIGHT MODE ONLY */
+html:not([data-theme="dark"]) pre {
+  border: 1px solid #d0d7de;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Override Prism inline styles for better contrast - LIGHT MODE ONLY */
+html:not([data-theme="dark"]) .prism-code {
+  background-color: #f6f8fa !important;
+}
+
+html:not([data-theme="dark"]) .codeBlockContainer_Ckt0 {
+  --prism-background-color: #f6f8fa !important;
+}
+
+html:not([data-theme="dark"]) pre.prism-code {
+  background-color: #f6f8fa !important;
+}
+
+/* Dark mode code block text - use original blue color from vsDark theme */
+[data-theme="dark"] .prism-code {
+  --prism-color: #9CDCFE !important;
+}
+
+[data-theme="dark"] pre.prism-code {
+  color: #9CDCFE !important;
+}
+
+[data-theme="dark"] .token-line {
+  color: #9CDCFE !important;
+}
+
+[data-theme="dark"] .token.plain {
+  color: #9CDCFE !important;
+}

@@ -1,0 +1,355 @@
+// @ts-check
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
+
+import { themes as prismThemes } from "prism-react-renderer";
+import remoteContentPlugins from "./remote-content/remote-content.js";
+
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: "llm-d",
+  tagline: "Open source, Kubernetes-native LLM inference - Achieve state-of-the-art inference performance on any accelerator with intelligent scheduling, KV-cache optimization, and seamless scaling.",
+  favicon: "img/llm-d-favicon.png",
+
+  url: "https://llm-d.ai/",
+  baseUrl: "/",
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+
+  organizationName: "llm-d", // Usually your GitHub org/user name.
+
+  projectName: "llm-d.github.io", // Usually your repo name.
+  deploymentBranch: "gh-pages",
+
+  trailingSlash: false,
+  onBrokenLinks: "warn",
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
+
+  // SEO: Organization structured data for rich search results
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'llm-d',
+        url: 'https://llm-d.ai',
+        logo: 'https://llm-d.ai/img/llm-d-icon.png',
+        description: 'Open source, Kubernetes-native LLM inference - Achieve state-of-the-art inference performance on any accelerator with intelligent scheduling, KV-cache optimization, and seamless scaling.',
+        sameAs: [
+          'https://github.com/llm-d',
+          'https://linkedin.com/company/llm-d',
+          'https://x.com/_llm_d_',
+          'https://bsky.app/profile/llm-d.ai',
+          'https://www.reddit.com/r/llm_d/',
+        ],
+      }),
+    },
+  ],
+
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: "./sidebars.js",
+          sidebarCollapsible: false,
+          exclude: [
+            '**/upstream-versions.md',
+          ],
+        },
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
+
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          //  editUrl:
+          //  "https://github.com/llm-d/llm-d-website.github.io/tree/main/",
+
+          // Useful options to enforce blogging best practices
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
+        },
+        theme: {
+          customCss: "./src/css/custom.css",
+        },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+        },
+      }),
+    ],
+  ],
+
+  // Client modules - run on every page
+  clientModules: [
+    require.resolve('./src/clientModules/analytics.js'),
+  ],
+  
+  // Plugins configuration
+  plugins: [
+    // Remote content plugins (managed independently)
+    ...remoteContentPlugins,
+
+    // Other site plugins
+    [
+      require.resolve("docusaurus-lunr-search"),
+      {
+        languages: ["en"],
+      },
+    ],
+
+    // Examples:
+    // ['@docusaurus/plugin-google-analytics', { trackingID: 'UA-XXXXXX-X' }],
+    // ['docusaurus-plugin-sass', {}],
+    // Add any other plugins you need
+  ],
+  
+  markdown: { 
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn"
+    }
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // Social card image for Open Graph and Twitter Cards
+      image: 'img/llm-d-social-card.jpg',
+      
+      // Additional meta tags for social media (Twitter/X, LinkedIn, Bluesky, etc.)
+      metadata: [
+        // Twitter/X specific
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@_llm_d_' },
+        // Open Graph (LinkedIn, Bluesky, Facebook, etc.)
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'llm-d' },
+        { property: 'og:locale', content: 'en_US' },
+      ],
+
+      // Announcement banner for v0.5 release
+      announcementBar: {
+        id: 'llm-d-v0-5-release',
+        content:
+          '🎉 <b>llm-d 0.5 is now released!</b> Check out hierarchical KV offloading, cache-aware LoRA routing, resilient networking with UCCL, and scale-to-zero autoscaling. <a target="_self" rel="noopener noreferrer" href="/blog/llm-d-v0.5-sustaining-performance-at-scale"><b>Read the announcement →</b></a>',
+        backgroundColor: '#7f317f',
+        textColor: '#fff',
+        isCloseable: true,
+      },
+
+      navbar: {
+        // title: "My Site",
+        logo: {
+          alt: "llm-d Logo",
+          src: "img/llm-d-icon.png",
+        },
+        items: [
+          {
+            type: "docSidebar",
+            sidebarId: "structureSidebar",
+            position: "left",
+            label: "Architecture",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "guideSidebar",
+            position: "left",
+            label: "Guides",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "usageSidebar",
+            position: "left",
+            label: "Usage",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "commSidebar",
+            position: "left",
+            label: "Community",
+          },
+          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/videos", label: "Videos", position: "left" },
+          {
+            type: 'html',
+            position: 'right',
+            className: 'navbar-github-stars',
+            value: '<iframe src="https://ghbtns.com/github-btn.html?user=llm-d&repo=llm-d&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Star" style="vertical-align: middle;"></iframe>',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            className: 'navbar-slack-item',
+            value: '<a href="/slack" class="navbar-slack-button"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Slack</title><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"></path></svg>Join Slack</a>',
+          },
+        ],
+      },
+
+      // Config for footer here
+      footer: {
+        style: "dark",
+        links: [
+          {
+            title: "Architecture",
+            items: [
+              {
+                label: "Overview",
+                to: "docs/architecture",
+              },
+              {
+                label: "Latest Release",
+                to: "docs/architecture/latest-release",
+              },
+              {
+                label: "Inference Scheduler",
+                to: "docs/architecture/Components/inference-scheduler",
+              },
+              {
+                label: "KV Cache",
+                to: "docs/architecture/Components/kv-cache",
+              },
+              {
+                label: "Model Service",
+                to: "docs/architecture/Components/modelservice",
+              },
+              {
+                label: "Benchmark Tools",
+                to: "docs/architecture/Components/benchmark",
+              },
+            ],
+          },
+          {
+            title: "Guides",
+            items: [
+              {
+                label: "Getting Started",
+                to: "docs/guide",
+              },
+              {
+                label: "Prerequisites",
+                to: "docs/guide/Installation/prerequisites",
+              },
+              {
+                label: "Inference Scheduling",
+                to: "docs/guide/Installation/inference-scheduling",
+              },
+              {
+                label: "Prefill/Decode Disaggregation",
+                to: "docs/guide/Installation/pd-disaggregation",
+              },
+              {
+                label: "Wide Expert Parallelism",
+                to: "docs/guide/Installation/wide-ep-lws",
+              },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "Contact us",
+                href: "/docs/community",
+              },
+
+              { 
+                label: "Contributing",
+                href: "/docs/community/contribute"
+              },
+              {
+                label: "Code of Conduct",
+                href: "/docs/community/code-of-conduct",
+              },
+            ],
+          },
+          {
+            title: "More",
+            items: [
+              {
+                label: "Blog",
+                to: "/blog",
+              },
+              {
+                label: "Privacy Policy",
+                href: "https://www.redhat.com/en/about/privacy-policy",
+              },
+            ],
+          },
+          {
+            title: "Social",
+            items: [
+              {
+                html: `
+                <div class="footer-socials" role="navigation" aria-label="Social links">
+                  <div class="footer-socials-row">
+                    <a href="https://github.com/llm-d/" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                      <img src="/img/new-social/github-mark-white.png" alt="GitHub" />
+                    </a>
+                    <a href="https://linkedin.com/company/llm-d" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+                      <img src="/img/new-social/linkedin-mark-white.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://llm-d.slack.com" target="_blank" rel="noreferrer noopener" aria-label="Slack">
+                      <img src="/img/new-social/slack-mark-white.png" alt="Slack" />
+                    </a>
+                    <a href="https://www.reddit.com/r/llm_d/" target="_blank" rel="noreferrer noopener" aria-label="Reddit">
+                      <img src="/img/new-social/reddit-mark-white.png" alt="Reddit" />
+                    </a>
+                    <a href="https://bsky.app/profile/llm-d.ai" target="_blank" rel="noreferrer noopener" aria-label="Bluesky">
+                      <img src="/img/new-social/bluesky-mark-white.svg" alt="Bluesky" />
+                    </a>
+                    <a href="https://x.com/_llm_d_" target="_blank" rel="noreferrer noopener" aria-label="X / Twitter">
+                      <img src="/img/new-social/x-mark-white.png" alt="X / Twitter" />
+                    </a>
+                    <a href="https://www.youtube.com/@llm-d-project" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+                      <img src="/img/new-social/youtube-mark-white.svg" alt="YouTube" />
+                    </a>
+                  </div>
+                  <div class="footer-socials-cta">
+                    <a href="/slack" target="_self" rel="noreferrer noopener" aria-label="Join our Slack">
+                      <span class="button-link">Join our Slack</span>
+                    </a>
+                  </div>
+                </div>
+              `,
+              },
+            ],
+          },
+        ],
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        additionalLanguages: ['yaml'],
+      },
+    }),
+};
+
+export default config;
+
+

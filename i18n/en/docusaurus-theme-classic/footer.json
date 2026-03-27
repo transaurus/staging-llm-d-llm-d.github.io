@@ -1,0 +1,86 @@
+{
+  "link.title.Architecture": {
+    "message": "Architecture",
+    "description": "The title of the footer links column with title=Architecture in the footer"
+  },
+  "link.title.Guides": {
+    "message": "Guides",
+    "description": "The title of the footer links column with title=Guides in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.title.Social": {
+    "message": "Social",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.item.label.Overview": {
+    "message": "Overview",
+    "description": "The label of footer link with label=Overview linking to docs/architecture"
+  },
+  "link.item.label.Latest Release": {
+    "message": "Latest Release",
+    "description": "The label of footer link with label=Latest Release linking to docs/architecture/latest-release"
+  },
+  "link.item.label.Inference Scheduler": {
+    "message": "Inference Scheduler",
+    "description": "The label of footer link with label=Inference Scheduler linking to docs/architecture/Components/inference-scheduler"
+  },
+  "link.item.label.KV Cache": {
+    "message": "KV Cache",
+    "description": "The label of footer link with label=KV Cache linking to docs/architecture/Components/kv-cache"
+  },
+  "link.item.label.Model Service": {
+    "message": "Model Service",
+    "description": "The label of footer link with label=Model Service linking to docs/architecture/Components/modelservice"
+  },
+  "link.item.label.Benchmark Tools": {
+    "message": "Benchmark Tools",
+    "description": "The label of footer link with label=Benchmark Tools linking to docs/architecture/Components/benchmark"
+  },
+  "link.item.label.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label of footer link with label=Getting Started linking to docs/guide"
+  },
+  "link.item.label.Prerequisites": {
+    "message": "Prerequisites",
+    "description": "The label of footer link with label=Prerequisites linking to docs/guide/Installation/prerequisites"
+  },
+  "link.item.label.Inference Scheduling": {
+    "message": "Inference Scheduling",
+    "description": "The label of footer link with label=Inference Scheduling linking to docs/guide/Installation/inference-scheduling"
+  },
+  "link.item.label.Prefill/Decode Disaggregation": {
+    "message": "Prefill/Decode Disaggregation",
+    "description": "The label of footer link with label=Prefill/Decode Disaggregation linking to docs/guide/Installation/pd-disaggregation"
+  },
+  "link.item.label.Wide Expert Parallelism": {
+    "message": "Wide Expert Parallelism",
+    "description": "The label of footer link with label=Wide Expert Parallelism linking to docs/guide/Installation/wide-ep-lws"
+  },
+  "link.item.label.Contact us": {
+    "message": "Contact us",
+    "description": "The label of footer link with label=Contact us linking to /docs/community"
+  },
+  "link.item.label.Contributing": {
+    "message": "Contributing",
+    "description": "The label of footer link with label=Contributing linking to /docs/community/contribute"
+  },
+  "link.item.label.Code of Conduct": {
+    "message": "Code of Conduct",
+    "description": "The label of footer link with label=Code of Conduct linking to /docs/community/code-of-conduct"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Privacy Policy",
+    "description": "The label of footer link with label=Privacy Policy linking to https://www.redhat.com/en/about/privacy-policy"
+  }
+}

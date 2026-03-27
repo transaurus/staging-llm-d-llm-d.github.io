@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-community/contribute" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Contributing to llm-d | llm-d</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:image" content="https://llm-d.ai/img/llm-d-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://llm-d.ai/img/llm-d-social-card.jpg"><meta data-rh="true" property="og:url" content="https://llm-d.ai/docs/community/contribute"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:site" content="@_llm_d_"><meta data-rh="true" property="og:type" content="website"><meta data-rh="true" property="og:site_name" content="llm-d"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Contributing to llm-d | llm-d"><meta data-rh="true" name="description" content="Guidelines for contributing to the llm-d project"><meta data-rh="true" property="og:description" content="Guidelines for contributing to the llm-d project"><link data-rh="true" rel="icon" href="/img/llm-d-favicon.png"><link data-rh="true" rel="canonical" href="https://llm-d.ai/docs/community/contribute"><link data-rh="true" rel="alternate" href="https://llm-d.ai/docs/community/contribute" hreflang="en"><link data-rh="true" rel="alternate" href="https://llm-d.ai/docs/community/contribute" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Contributing","item":"https://llm-d.ai/docs/community/contribute"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="llm-d RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="llm-d Atom Feed">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"llm-d","url":"https://llm-d.ai","logo":"https://llm-d.ai/img/llm-d-icon.png","description":"Open source, Kubernetes-native LLM inference - Achieve state-of-the-art inference performance on any accelerator with intelligent scheduling, KV-cache optimization, and seamless scaling.","sameAs":["https://github.com/llm-d","https://linkedin.com/company/llm-d","https://x.com/_llm_d_","https://bsky.app/profile/llm-d.ai","https://www.reddit.com/r/llm_d/"]}</script><link rel="stylesheet" href="/assets/css/styles.2ac3f4d6.css">
+<script src="/assets/js/runtime~main.b649245b.js" defer="defer"></script>
+<script src="/assets/js/main.312d0fbd.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/llm-d-icon.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#7f317f;color:#fff" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY">🎉 <b>llm-d 0.5 is now released!</b> Check out hierarchical KV offloading, cache-aware LoRA routing, resilient networking with UCCL, and scale-to-zero autoscaling. <a target="_self" rel="noopener noreferrer" href="/blog/llm-d-v0.5-sustaining-performance-at-scale"><b>Read the announcement →</b></a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/llm-d-icon.png" alt="llm-d Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/llm-d-icon.png" alt="llm-d Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link" href="/docs/architecture">Architecture</a><a class="navbar__item navbar__link" href="/docs/guide">Guides</a><a class="navbar__item navbar__link" href="/docs/usage/getting-started-inferencing">Usage</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/community">Community</a><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/videos">Videos</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item navbar-github-stars"><iframe src="https://ghbtns.com/github-btn.html?user=llm-d&repo=llm-d&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Star" style="vertical-align: middle;"></iframe></div><div class="navbar__item navbar-slack-item"><a href="/slack" class="navbar-slack-button"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Slack</title><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"></path></svg>Join Slack</a></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/community"><span title="Welcome to llm-d" class="linkLabel_WmDU">Welcome to llm-d</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/community/contribute"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/community/events"><span title="Upcoming llm-d Events" class="linkLabel_WmDU">Upcoming llm-d Events</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/community/code-of-conduct"><span title="Code of Conduct" class="linkLabel_WmDU">Code of Conduct</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/community/sigs"><span title="Special Interest Groups (SIGs)" class="linkLabel_WmDU">Special Interest Groups (SIGs)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/community/security"><span title="Security Policy" class="linkLabel_WmDU">Security Policy</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Contributing</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Contributing to llm-d</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="contributing-guidelines">Contributing Guidelines<a href="#contributing-guidelines" class="hash-link" aria-label="Direct link to Contributing Guidelines" title="Direct link to Contributing Guidelines" translate="no">​</a></h2>
+<p>Thank you for your interest in contributing to llm-d. Community involvement is highly valued and crucial for the project&#x27;s growth and success. The llm-d project accepts contributions via GitHub pull requests. This outlines the process to help get your contribution accepted.</p>
+<p>To ensure a clear direction and cohesive vision for the project, the project leads have the final decision on all contributions. However, these guidelines outline how you can contribute effectively to llm-d.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-you-can-contribute">How You Can Contribute<a href="#how-you-can-contribute" class="hash-link" aria-label="Direct link to How You Can Contribute" title="Direct link to How You Can Contribute" translate="no">​</a></h2>
+<p>There are several ways you can contribute to llm-d:</p>
+<ul>
+<li class=""><strong>Reporting Issues:</strong> Help us identify and fix bugs by reporting them clearly and concisely.</li>
+<li class=""><strong>Suggesting Features:</strong> Share your ideas for new features or improvements.</li>
+<li class=""><strong>Improving Documentation:</strong> Help make the project more accessible by enhancing the documentation.</li>
+<li class=""><strong>Submitting Code Contributions (with consideration):</strong> While the project leads maintain final say, code contributions that align with the project&#x27;s vision are always welcome.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="code-of-conduct">Code of Conduct<a href="#code-of-conduct" class="hash-link" aria-label="Direct link to Code of Conduct" title="Direct link to Code of Conduct" translate="no">​</a></h2>
+<p>This project adheres to the llm-d <a class="" href="/docs/community/code-of-conduct">Code of Conduct and Covenant</a>. By participating, you are expected to uphold this code.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community-and-communication">Community and Communication<a href="#community-and-communication" class="hash-link" aria-label="Direct link to Community and Communication" title="Direct link to Community and Communication" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Developer Slack:</strong> <a href="https://llm-d.ai/slack" target="_blank" rel="noopener noreferrer" class="">Join our developer Slack workspace</a> to connect with the core maintainers and other contributors, ask questions, and participate in discussions.</li>
+<li class=""><strong>Weekly Meetings:</strong> Project updates, ongoing work discussions, and Q&amp;A will be covered in our weekly project meeting every Wednesday at 12:30 PM ET. Please join by <a href="https://red.ht/llm-d-public-calendar" target="_blank" rel="noopener noreferrer" class="">adding the shared calendar</a>. You can also <a href="https://groups.google.com/g/llm-d-contributors" target="_blank" rel="noopener noreferrer" class="">join our Google Group</a> for access to shared diagrams and other content.<!-- -->
+<ul>
+<li class="">Access meeting recordings and meeting notes on the <a href="https://drive.google.com/drive/folders/1Y9ahJ9BhhDuwnPK6QHmKTi8uoz1FTqvA" target="_blank" rel="noopener noreferrer" class="">llm-d Public Google Drive</a></li>
+</ul>
+</li>
+<li class=""><strong>SIGs:</strong> Join one of our <a class="" href="/docs/community/sigs">Special Interest Groups (SIGs)</a> to contribute to specific areas of the project and collaborate with domain experts.<!-- -->
+<ul>
+<li class="">Access SIG meeting recordings and project documentation on the <a href="https://drive.google.com/drive/folders/13PVmYoIJitt5iZyaFTZiAgp_o66qAS8t" target="_blank" rel="noopener noreferrer" class="">Public SIG Documentation Google Drive</a></li>
+</ul>
+</li>
+<li class=""><strong>Code</strong>: Hosted in the <a href="https://github.com/llm-d" target="_blank" rel="noopener noreferrer" class="">llm-d</a> GitHub organization</li>
+<li class=""><strong>Issues</strong>: Project-scoped bugs or issues should be reported in <a href="https://github.com/llm-d/llm-d" target="_blank" rel="noopener noreferrer" class="">llm-d/llm-d</a></li>
+<li class=""><strong>Mailing List</strong>: <a href="mailto:llm-d-contributors@googlegroups.com" target="_blank" rel="noopener noreferrer" class="">llm-d-contributors@googlegroups.com</a> for document sharing and collaboration</li>
+<li class=""><strong>Social Media:</strong> Follow us on social media for the latest news, announcements, and updates:<!-- -->
+<ul>
+<li class=""><strong>X:</strong> <a href="https://x.com/_llm_d_" target="_blank" rel="noopener noreferrer" class="">https://x.com/_llm_d_</a></li>
+<li class=""><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/llm-d" target="_blank" rel="noopener noreferrer" class="">https://linkedin.com/company/llm-d</a></li>
+<li class=""><strong>Reddit:</strong> <a href="https://www.reddit.com/r/llm_d/" target="_blank" rel="noopener noreferrer" class="">https://www.reddit.com/r/llm_d/</a></li>
+<li class=""><strong>YouTube</strong> <a href="https://youtube.com/@llm-d-project" target="_blank" rel="noopener noreferrer" class="">@llm-d-project</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="contributing-process">Contributing Process<a href="#contributing-process" class="hash-link" aria-label="Direct link to Contributing Process" title="Direct link to Contributing Process" translate="no">​</a></h2>
+<p>We follow a <strong>lazy consensus</strong> approach: changes proposed by people with responsibility for a problem, without disagreement from others, within a bounded time window of review by their peers, should be accepted.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="types-of-contributions">Types of Contributions<a href="#types-of-contributions" class="hash-link" aria-label="Direct link to Types of Contributions" title="Direct link to Types of Contributions" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-features-with-public-apis-or-new-components">1. Features with Public APIs or New Components<a href="#1-features-with-public-apis-or-new-components" class="hash-link" aria-label="Direct link to 1. Features with Public APIs or New Components" title="Direct link to 1. Features with Public APIs or New Components" translate="no">​</a></h4>
+<p>All features involving public APIs, behavior between core components, or new core repositories/subsystems must be accompanied by an <strong>approved project proposal</strong>.</p>
+<p><strong>Process:</strong></p>
+<ol>
+<li class="">Create a pull request adding a markdown file under <code>./docs/proposals</code> with a descriptive name (e.g., <code>docs/proposals/disaggregated_serving.md</code>)</li>
+<li class="">Use the template at <code>./docs/proposals/PROPOSAL_TEMPLATE.md</code> with these sections:<!-- -->
+<ul>
+<li class=""><strong>Summary</strong>: A sentence or two suitable for any contributor or any user to understand the change proposed and the outcome</li>
+<li class=""><strong>Motivation</strong>: Problem to be solved, including Goals/Non-Goals, and any necessary background</li>
+<li class=""><strong>Proposal</strong>: Can include User Stories (&quot;As a User I want to X&quot;), should have enough detail that reviewers can understand exactly what you&#x27;re proposing, but should not include things like API designs or implementation. What is the desired outcome and how do we measure success?</li>
+<li class=""><strong>Design Details</strong>: Should contain enough information that the specifics of your change are understandable. This may include API specs (though not always required) or even code snippets. If there&#x27;s any ambiguity about HOW your proposal will be implemented, this is the place to discuss them.</li>
+<li class=""><strong>Alternatives</strong>: Provide alternative implementations/proposals and a short summary of why they were rejected</li>
+</ul>
+</li>
+<li class="">Get review from impacted component maintainers</li>
+<li class="">Get approval from project maintainers</li>
+</ol>
+<p>The proposal must be reviewed by the impacted component maintainers and approved by project maintainers. Proposal review should enforce overall principles and ensure consistency and coherence of the project. Approval of a proposal should reflect lazy consensus that the proposal is the right path, and the proposal should have high priority for review.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-fixes-issues-and-bugs">2. Fixes, Issues, and Bugs<a href="#2-fixes-issues-and-bugs" class="hash-link" aria-label="Direct link to 2. Fixes, Issues, and Bugs" title="Direct link to 2. Fixes, Issues, and Bugs" translate="no">​</a></h4>
+<p>For changes that fix broken code or add small changes within a component:</p>
+<ul>
+<li class="">All bugs and commits must have a clear description of the bug, how to reproduce, and how the change is made</li>
+<li class="">Any other changes can be proposed in a pull-request to a component or an issue in llm-d/llm-d, a maintainer must approve the change (within the spirit of the component design and scope of change)<!-- -->
+<ul>
+<li class="">A good way to bring attention for moderate size changes is to create an RFC issue in GitHub, then engage in Slack</li>
+<li class="">Within components, use project proposals when scope of change is large or impact to users is high</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="feature-testing">Feature testing<a href="#feature-testing" class="hash-link" aria-label="Direct link to Feature testing" title="Direct link to Feature testing" translate="no">​</a></h2>
+<p>The first key step in testing a feature, or bugfix is to identify what layer of the stack are you testing. Here are some test cases:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="deployment-related-changes">Deployment related changes<a href="#deployment-related-changes" class="hash-link" aria-label="Direct link to Deployment related changes" title="Direct link to Deployment related changes" translate="no">​</a></h3>
+<ul>
+<li class="">Swapping GIE helm chart version and <code>inference-scheduler</code> image upgrades - check <code>inference-scheduler</code> container logs<!-- -->
+<ul>
+<li class="">Check that your <code>InferencePool</code> exists (<code>kubectl get InferencePool.inference.networking.k8s.io</code>)</li>
+</ul>
+</li>
+<li class="">Upgrading Infra helmchart or anything affecting Gateway infrastructure<!-- -->
+<ul>
+<li class="">Check the <code>gateway</code> object (<code>kubectl get gateway -o yaml</code>)<!-- -->
+<ul>
+<li class="">Check the <code>status</code> section, make sure it has an <code>address</code> and that there is a message saying <code>&quot;Resource programmed, assigned to service(s) &lt;gateway_service_address&gt;&quot;</code></li>
+<li class="">Check the <code>parametersRef</code> for the <code>gateway</code> <code>infrastructure</code> exists (<code>kubectl get gateway wide-ep-inference-gateway -o yaml | yq .spec.infrastructure.parametersRef</code>, and then check to ensure that resource itself exists)</li>
+</ul>
+</li>
+<li class="">If using <code>istio</code> also check that your <code>DestinationRule</code> exists</li>
+</ul>
+</li>
+<li class="">Check the <code>httpRoute</code> object <code>status</code> section (<code>kubectl get httpRoute -o yaml | yq &#x27;.status.parents[]&#x27;</code>)<!-- -->
+<ul>
+<li class="">Ensure there is a message in the conditions stating: <code>&quot;Route was valid&quot;</code></li>
+<li class="">Ensure there is a parent ref on the <code>httpRoute</code>, pointing to the <code>httpRoute</code> being attached properly to the <code>gateway</code></li>
+</ul>
+</li>
+<li class="">Modelservice helm chart upgrades<!-- -->
+<ul>
+<li class="">Ensure <code>vLLM</code> pods up</li>
+<li class=""><code>prefill</code> and <code>decode</code> <code>podmonitor</code>s are deployed if metrics are enabled</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="container-image-build-changes-and-upgrades">Container Image Build Changes and Upgrades<a href="#container-image-build-changes-and-upgrades" class="hash-link" aria-label="Direct link to Container Image Build Changes and Upgrades" title="Direct link to Container Image Build Changes and Upgrades" translate="no">​</a></h3>
+<ul>
+<li class="">Kernel upgrades and changes (<code>deepep</code>, <code>deepgemm</code>) - Ignore <code>flash-infer</code>
+<ul>
+<li class="">To test these ensure you use the proper vLLM backend via the <code>--all2all-backend</code> vLLM CLI arg.<!-- -->
+<ul>
+<li class="">For single-node testing without extra dependencies, use <code>allgather_reducescatter</code> (the default)</li>
+<li class="">For testing the deepseek kernels, you can set <code>prefill</code>s backend to <code>deepep_high_throughput</code> and <code>decode</code> backend to <code>deepep_low_latency</code>
+<ul>
+<li class="">This needs to be tested in either <code>pd-disaggregation</code> or better yet <code>wide-ep-lws</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class=""><code>UCX</code> + <code>NIXL</code> version bumps and changes<!-- -->
+<ul>
+<li class="">This can be tested in <code>pd-disaggregation</code> or <code>wide-ep-lws</code></li>
+<li class="">Currently we build <code>UCX</code> from source, and then build <code>NIXL</code> against our build of <code>NIXL</code></li>
+</ul>
+</li>
+<li class=""><code>LMCache</code> version bumps and changes (coming soon)<!-- -->
+<ul>
+<li class="">Currently nothing uses the <code>LMCache</code> codepath directly, this will come as a subset of the KVCache offloading epic</li>
+</ul>
+</li>
+<li class=""><code>vLLM</code> version bumps and changes<!-- -->
+<ul>
+<li class="">By default we build <code>vLLM</code> with precompiled binaries from the upstream vLLM wheels index.</li>
+<li class="">This can be tested in any example</li>
+</ul>
+</li>
+<li class=""><code>EFA</code>
+<ul>
+<li class="">To test the libfabric plugin itself over NIXL you can do the following inside a container image built with EFA support (does not require GPUs or EFA):</li>
+</ul>
+</li>
+</ul>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">export NIXL_LOG_LEVEL=debug</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">python3 - &lt;&lt;&#x27;EOF&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">from nixl._api import nixl_agent, nixl_agent_config</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">agent_config = nixl_agent_config(backends=[&quot;LIBFABRIC&quot;])</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nixl_agent1 = nixl_agent(&quot;target&quot;, agent_config)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">EOF</span><br></span></code></pre></div></div>
+<ul>
+<li class="">To test actual inference over EFA in AWS with P5+ instances ensure that <code>UCX_TLS</code> includes an option with high priority for accelerating over EFA via an ENV var:</li>
+</ul>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> UCX_TLS</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">value</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;efa,sockcm,sm,self,cuda_copy,cuda_ipc&quot;</span><br></span></code></pre></div></div>
+<ul>
+<li class="">Ensure that the containers request an instance of the EFA resource:</li>
+</ul>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">requests</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">vpc.amazonaws.com/efa</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="container-image-checklist">Container Image Checklist<a href="#container-image-checklist" class="hash-link" aria-label="Direct link to Container Image Checklist" title="Direct link to Container Image Checklist" translate="no">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>inference-scheduler</code> guide</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>precise-kv-cache-aware</code> example</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>pd-disaggregation</code> example (also covers deepseek kernels)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>wide-ep-lws</code> example (also covers deepseek kernels)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->a <code>guidellm</code> benchmark to do a load test for performance regressions (any example)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->run <code>pd-disaggregation</code> or <code>wide-ep-lws</code> with deepseek kernels (for <code>prefill</code>s set <code>--all2all-backend</code> to <code>deepep_high_throughput</code> and set <code>decode</code> <code>--all2all-backend</code> to <code>deepep_low_latency</code>)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="code-review-requirements">Code Review Requirements<a href="#code-review-requirements" class="hash-link" aria-label="Direct link to Code Review Requirements" title="Direct link to Code Review Requirements" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>All code changes</strong> must be submitted as pull requests (no direct pushes)</li>
+<li class=""><strong>All changes</strong> must be reviewed and approved by a maintainer other than the author</li>
+<li class=""><strong>All repositories</strong> must gate merges on compilation and passing tests</li>
+<li class=""><strong>All experimental features</strong> must be off by default and require explicit opt-in</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="commit-and-pull-request-style">Commit and Pull Request Style<a href="#commit-and-pull-request-style" class="hash-link" aria-label="Direct link to Commit and Pull Request Style" title="Direct link to Commit and Pull Request Style" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Pull requests</strong> should describe the problem succinctly</li>
+<li class=""><strong>Rebase and squash</strong> before merging</li>
+<li class=""><strong>Use minimal commits</strong> and break large changes into distinct commits</li>
+<li class=""><strong>Commit messages</strong> should have:<!-- -->
+<ul>
+<li class="">Short, descriptive titles</li>
+<li class="">Description of why the change was needed</li>
+<li class="">Enough detail for someone reviewing git history to understand the scope</li>
+</ul>
+</li>
+<li class=""><strong>DCO Sign-off</strong>: All commits must include a valid DCO sign-off line (<code>Signed-off-by: Name &lt;email@domain.com&gt;</code>)<!-- -->
+<ul>
+<li class="">Add automatically with <code>git commit -s</code></li>
+<li class="">See <a href="https://github.com/llm-d/llm-d/blob/main/PR_SIGNOFF.md" target="_blank" rel="noopener noreferrer" class="">PR_SIGNOFF.md</a> for configuration details</li>
+<li class="">Required for all contributions per <a href="https://developercertificate.org/" target="_blank" rel="noopener noreferrer" class="">Developer Certificate of Origin</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="code-organization-and-ownership">Code Organization and Ownership<a href="#code-organization-and-ownership" class="hash-link" aria-label="Direct link to Code Organization and Ownership" title="Direct link to Code Organization and Ownership" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="components-and-maintainers">Components and Maintainers<a href="#components-and-maintainers" class="hash-link" aria-label="Direct link to Components and Maintainers" title="Direct link to Components and Maintainers" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Components</strong> are the primary unit of code organization (repo scope or directory/package/module within a repo)</li>
+<li class=""><strong>Maintainers</strong> own components and approve changes</li>
+<li class=""><strong>Contributors</strong> can become maintainers through sufficient evidence of contribution</li>
+<li class="">Code ownership is reflected in <a href="https://go.k8s.io/owners" target="_blank" rel="noopener noreferrer" class="">OWNERS files</a> consistent with Kubernetes project conventions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-vs-incubating-components">Core vs Incubating Components<a href="#core-vs-incubating-components" class="hash-link" aria-label="Direct link to Core vs Incubating Components" title="Direct link to Core vs Incubating Components" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Core components</strong>: Supported by the project with strong lifecycle controls and forward compatibility</li>
+<li class=""><strong>Incubating components</strong>: Rapidly iterating, not yet ready for production use, allowing greater freedom for testing ideas</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="experimental-features-and-incubation">Experimental Features and Incubation<a href="#experimental-features-and-incubation" class="hash-link" aria-label="Direct link to Experimental Features and Incubation" title="Direct link to Experimental Features and Incubation" translate="no">​</a></h2>
+<p>We encourage fast iteration and exploration with these constraints:</p>
+<ol>
+<li class=""><strong>Clear identification</strong> as experimental in code and documentation</li>
+<li class=""><strong>Default to off</strong> and require explicit enablement</li>
+<li class=""><strong>Best effort support</strong> only</li>
+<li class=""><strong>Removal if unmaintained</strong> with no one to move it forward</li>
+<li class=""><strong>No stigma</strong> to experimental or incubating status</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="incubating-components-process">Incubating Components Process<a href="#incubating-components-process" class="hash-link" aria-label="Direct link to Incubating Components Process" title="Direct link to Incubating Components Process" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Create repositories</strong> in <code>llm-d-incubation</code> GitHub org with maintainers and clear goals</li>
+<li class=""><strong>Define timeframe</strong> for experimentation</li>
+<li class=""><strong>Iterate and test</strong> with initial users</li>
+<li class=""><strong>For well-lit path components</strong>:<!-- -->
+<ul>
+<li class="">Create project proposal covering integration</li>
+<li class="">Define graduation success criteria</li>
+<li class="">Add to well-lit path after approval</li>
+</ul>
+</li>
+<li class=""><strong>For standalone components</strong>:<!-- -->
+<ul>
+<li class="">Create project proposal with graduation criteria</li>
+<li class="">Component can be used with experimental label</li>
+</ul>
+</li>
+<li class=""><strong>Graduation</strong>: Move to core <code>llm-d</code> org and follow core process</li>
+<li class=""><strong>If not graduating</strong>: Archive for 3+ months before removal</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="experimental-features-in-core-components">Experimental Features in Core Components<a href="#experimental-features-in-core-components" class="hash-link" aria-label="Direct link to Experimental Features in Core Components" title="Direct link to Experimental Features in Core Components" translate="no">​</a></h3>
+<ol>
+<li class="">Open pull request to existing core component</li>
+<li class="">Maintainer classifies as experimental, enforces &quot;off-by-default&quot; gating</li>
+<li class="">Provide tests for both on/off states</li>
+<li class="">When graduating, default to on and remove conditional logic after one release</li>
+</ol>
+<p><strong>Naming convention</strong>: Experimental flags must include <code>experimental</code> in name (e.g., <code>--experimental-disaggregation-v2=true</code>)</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-changes-and-deprecation">API Changes and Deprecation<a href="#api-changes-and-deprecation" class="hash-link" aria-label="Direct link to API Changes and Deprecation" title="Direct link to API Changes and Deprecation" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>No breaking changes</strong>: Once an API/protocol is in GA release (non-experimental), it cannot be removed or behavior changed</li>
+<li class=""><strong>Includes</strong>: All protocols, API endpoints, internal APIs, command line flags/arguments</li>
+<li class=""><strong>Exception</strong>: Bug fixes that don&#x27;t impact significant number of consumers (As the project matures, we will be stricter about such changes - Hyrum&#x27;s Law is real)</li>
+<li class=""><strong>Versioning</strong>: All protocols and APIs should be versionable with clear forward and backward compatibility requirements. A new version may change behavior and fields.</li>
+<li class=""><strong>Documentation</strong>: All APIs must have documented specs describing expected behavior</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-requirements">Testing Requirements<a href="#testing-requirements" class="hash-link" aria-label="Direct link to Testing Requirements" title="Direct link to Testing Requirements" translate="no">​</a></h2>
+<p>We use three tiers of testing:</p>
+<ol>
+<li class=""><strong>Unit tests</strong>: Fast verification of code parts, testing different arguments<!-- -->
+<ul>
+<li class="">Best for fast verification of parts of code, testing different arguments</li>
+<li class="">Doesn&#x27;t cover interactions between code</li>
+</ul>
+</li>
+<li class=""><strong>Integration tests</strong>: Testing protocols between components and built artifacts<!-- -->
+<ul>
+<li class="">Best for testing protocols and agreements between components</li>
+<li class="">May not model interactions between components as they are deployed</li>
+</ul>
+</li>
+<li class=""><strong>End-to-end (e2e) tests</strong>: Whole system testing including benchmarking<!-- -->
+<ul>
+<li class="">Best for preventing end to end regression and verifying overall correctness</li>
+<li class="">Execution can be slow</li>
+</ul>
+</li>
+</ol>
+<p>Strong e2e coverage is required for deployed systems to prevent performance regression. Appropriate test coverage is an important part of code review.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security" translate="no">​</a></h2>
+<p>Maintain appropriate security mindset for production serving. The project will establish a project email address for responsible disclosure of security issues that will be reviewed by the project maintainers. Prior to the first GA release we will formalize a security component and process.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="project-structure">Project Structure<a href="#project-structure" class="hash-link" aria-label="Direct link to Project Structure" title="Direct link to Project Structure" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-organization-llm-d">Core Organization (<code>llm-d</code>)<a href="#core-organization-llm-d" class="hash-link" aria-label="Direct link to core-organization-llm-d" title="Direct link to core-organization-llm-d" translate="no">​</a></h3>
+<ul>
+<li class="">Production-ready code on well-lit path</li>
+<li class="">Follows API Changes and Deprecation process</li>
+<li class="">All major changes require project proposals</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="incubation-organization-llm-d-incubation">Incubation Organization (<code>llm-d-incubation</code>)<a href="#incubation-organization-llm-d-incubation" class="hash-link" aria-label="Direct link to incubation-organization-llm-d-incubation" title="Direct link to incubation-organization-llm-d-incubation" translate="no">​</a></h3>
+<ul>
+<li class="">Experimental components not yet fully supported</li>
+<li class="">Bias towards accepting experimentation with clear goals</li>
+<li class="">Each repo must have README describing purpose and goal</li>
+<li class="">Graduated components move to <code>llm-d</code> org</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Content Source</div><div class="admonitionContent_BuS1"><p>This content is automatically synced from <a href="https://github.com/llm-d/llm-d/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="">CONTRIBUTING.md</a> on the <code>main</code> branch of the llm-d/llm-d repository.</p><p>📝 To suggest changes, please <a href="https://github.com/llm-d/llm-d/edit/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="">edit the source file</a> or <a href="https://github.com/llm-d/llm-d/issues" target="_blank" rel="noopener noreferrer" class="">create an issue</a>.</p></div></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/community"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Welcome to llm-d</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/community/events"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Upcoming llm-d Events</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#contributing-guidelines" class="table-of-contents__link toc-highlight">Contributing Guidelines</a></li><li><a href="#how-you-can-contribute" class="table-of-contents__link toc-highlight">How You Can Contribute</a></li><li><a href="#code-of-conduct" class="table-of-contents__link toc-highlight">Code of Conduct</a></li><li><a href="#community-and-communication" class="table-of-contents__link toc-highlight">Community and Communication</a></li><li><a href="#contributing-process" class="table-of-contents__link toc-highlight">Contributing Process</a><ul><li><a href="#types-of-contributions" class="table-of-contents__link toc-highlight">Types of Contributions</a></li></ul></li><li><a href="#feature-testing" class="table-of-contents__link toc-highlight">Feature testing</a><ul><li><a href="#deployment-related-changes" class="table-of-contents__link toc-highlight">Deployment related changes</a></li><li><a href="#container-image-build-changes-and-upgrades" class="table-of-contents__link toc-highlight">Container Image Build Changes and Upgrades</a></li><li><a href="#container-image-checklist" class="table-of-contents__link toc-highlight">Container Image Checklist</a></li><li><a href="#code-review-requirements" class="table-of-contents__link toc-highlight">Code Review Requirements</a></li><li><a href="#commit-and-pull-request-style" class="table-of-contents__link toc-highlight">Commit and Pull Request Style</a></li></ul></li><li><a href="#code-organization-and-ownership" class="table-of-contents__link toc-highlight">Code Organization and Ownership</a><ul><li><a href="#components-and-maintainers" class="table-of-contents__link toc-highlight">Components and Maintainers</a></li><li><a href="#core-vs-incubating-components" class="table-of-contents__link toc-highlight">Core vs Incubating Components</a></li></ul></li><li><a href="#experimental-features-and-incubation" class="table-of-contents__link toc-highlight">Experimental Features and Incubation</a><ul><li><a href="#incubating-components-process" class="table-of-contents__link toc-highlight">Incubating Components Process</a></li><li><a href="#experimental-features-in-core-components" class="table-of-contents__link toc-highlight">Experimental Features in Core Components</a></li></ul></li><li><a href="#api-changes-and-deprecation" class="table-of-contents__link toc-highlight">API Changes and Deprecation</a></li><li><a href="#testing-requirements" class="table-of-contents__link toc-highlight">Testing Requirements</a></li><li><a href="#security" class="table-of-contents__link toc-highlight">Security</a></li><li><a href="#project-structure" class="table-of-contents__link toc-highlight">Project Structure</a><ul><li><a href="#core-organization-llm-d" class="table-of-contents__link toc-highlight">Core Organization (<code>llm-d</code>)</a></li><li><a href="#incubation-organization-llm-d-incubation" class="table-of-contents__link toc-highlight">Incubation Organization (<code>llm-d-incubation</code>)</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/architecture">Overview</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/architecture/latest-release">Latest Release</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/architecture/Components/inference-scheduler">Inference Scheduler</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/architecture/Components/kv-cache">KV Cache</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/architecture/Components/modelservice">Model Service</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/architecture/Components/benchmark">Benchmark Tools</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Guides</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/guide">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guide/Installation/prerequisites">Prerequisites</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guide/Installation/inference-scheduling">Inference Scheduling</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guide/Installation/pd-disaggregation">Prefill/Decode Disaggregation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guide/Installation/wide-ep-lws">Wide Expert Parallelism</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/community">Contact us</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/community/contribute">Contributing</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/community/code-of-conduct">Code of Conduct</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://www.redhat.com/en/about/privacy-policy" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy Policy<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Social</div><ul class="footer__items clean-list"><li class="footer__item">
+                <div class="footer-socials" role="navigation" aria-label="Social links">
+                  <div class="footer-socials-row">
+                    <a href="https://github.com/llm-d/" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                      <img src="/img/new-social/github-mark-white.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/company/llm-d" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+                      <img src="/img/new-social/linkedin-mark-white.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://llm-d.slack.com" target="_blank" rel="noreferrer noopener" aria-label="Slack">
+                      <img src="/img/new-social/slack-mark-white.png" alt="Slack">
+                    </a>
+                    <a href="https://www.reddit.com/r/llm_d/" target="_blank" rel="noreferrer noopener" aria-label="Reddit">
+                      <img src="/img/new-social/reddit-mark-white.png" alt="Reddit">
+                    </a>
+                    <a href="https://bsky.app/profile/llm-d.ai" target="_blank" rel="noreferrer noopener" aria-label="Bluesky">
+                      <img src="/img/new-social/bluesky-mark-white.svg" alt="Bluesky">
+                    </a>
+                    <a href="https://x.com/_llm_d_" target="_blank" rel="noreferrer noopener" aria-label="X / Twitter">
+                      <img src="/img/new-social/x-mark-white.png" alt="X / Twitter">
+                    </a>
+                    <a href="https://www.youtube.com/@llm-d-project" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+                      <img src="/img/new-social/youtube-mark-white.svg" alt="YouTube">
+                    </a>
+                  </div>
+                  <div class="footer-socials-cta">
+                    <a href="/slack" target="_self" rel="noreferrer noopener" aria-label="Join our Slack">
+                      <span class="button-link">Join our Slack</span>
+                    </a>
+                  </div>
+                </div>
+              </li></ul></div></div></div></footer></div>
+</body>
+</html>
